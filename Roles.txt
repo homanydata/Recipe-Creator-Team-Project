@@ -1,0 +1,3 @@
+Ali Dokmak: main html css & nav styling
+Hiba Zoghbi: recipe html & css
+Ali Houmani: 3 js scripts files
