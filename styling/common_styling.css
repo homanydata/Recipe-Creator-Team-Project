@@ -1,0 +1,41 @@
+/* link to be able to use some new fonts */
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Solway:wght@300;400;500;700;800&family=Leckerli+One&family=Tangerine:wght@400;700&family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+/* 
+font-family: 'Finger Paint', sans-serif; for some buttons, a bit cute & funny
+font-family: 'Solway', serif; for lists, nice & clean
+font-family: 'Tangerine', cursive; handwriting-like font for the slogan
+font-family: 'Work Sans', sans-serif; for most stuff
+font-family: 'Leckerli One', cursive; for recipe name in recipe page
+*/
+
+
+
+/* colors, fonts.. all common stuff btw the 3 pages */
+:root{
+  --gold: #B68D13;
+  --brown: #3B2200;
+  --grey: #D6D6D6;
+  --pink: #FF86DA;
+  --orange: #FFC720;
+}
+
+
+/* we can use any of these colors in any other file, this is an example:
+.selected{
+  color: var(--gold);
+}
+*/
+
+
+/* some common styling */
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Work Sans', sans-serif;
+}
+a{
+  color: inherit;
+  font-size: inherit;
+}
+

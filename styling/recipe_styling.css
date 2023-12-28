@@ -1,0 +1,206 @@
+body {
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 5% , rgba(255, 255, 255, 0)), url("../images/burger.jpg") ;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position:center;
+    text-align: center;
+    margin: 0;
+}
+
+
+.recipe-name{
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  justify-content:space-around;
+  align-items: center;
+  background-color: var(--gold);
+  margin-top: 0;
+  margin-bottom: 5px;
+  height:40px;
+  color: white;
+  font-family: 'Leckerli One', cursive;
+  font-weight: 400;
+  text-transform: capitalize;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.553);
+}
+.recipe-name h2{
+    font-weight: inherit;
+}
+.recipe-name svg{
+    height: 20px;
+    width:20px;
+    fill: white;
+}
+
+.step-container {
+    display: flex;
+    flex-direction: column; 
+    margin:20px 20px;
+
+}
+
+/* step number */
+.step-box {
+    background-color:var(--brown);
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width:fit-content;
+    color: white;
+    font-family: 'Finger Paint', sans-serif;
+}
+
+/* details tb3 recipe */
+.details-box {
+    background-color:white; 
+    border: solid var(--brown);
+    color: var(--brown);
+    font-family: 'Work Sans', sans-serif;
+    padding: 15px;
+    border-radius: 20px;
+    height:100px;
+}
+
+/* previous home next container */
+.navigation-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* previous next */
+.navigation-box {
+    padding: 10px;
+    margin: 0 10px;
+    border-radius:50%; 
+    height:40px; 
+    width:40px;
+}
+
+/* svg style for prev next */
+.navigation-box svg{
+    width: 40px;
+    height: 40px;
+    fill:white;
+    border: solid var(--brown);
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 10px rgba(255, 255, 255, 0,5));
+}
+
+/* division tb3 l home */
+#home{
+    height:20px;
+    width:20px;
+    background-color:var(--brown);
+}
+
+#home svg{
+    width: 20px;
+    height: 20px;
+    fill:white;
+    border: none;
+}
+
+/* l container tb3 l edit w delete */
+.additional-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px ;
+}
+
+/* edit delete buttons */
+.additional-button {
+    margin: 0 10px;
+    padding: 5px;
+    background-color: none;
+}
+/* style lal svg  */
+.additional-button svg{
+    height: 20px;
+    width:20px;
+    fill: white;
+}
+
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin-bottom: 5px;
+    width: auto;
+}
+
+
+.ingredients-box {
+    background-color: var(--brown); 
+    padding: 8px;
+    border-radius: 20px;
+    width: 100px; 
+    font-family: 'Finger Paint', sans-serif;
+    text-transform: capitalize;
+    color:white;
+}
+
+/* margin right is to center manuallly the box based on ingredients container */
+.big-container{
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+
+/* contains list of ingredients m3 l share w copy buttons */
+.ingredients-container{
+    background-color:white;
+    border: solid var(--brown);
+    border-radius: 15px;
+    width:200px;
+}
+
+.list-container {
+    text-align: center;
+    font-family: 'Solway', serif;
+    font-weight: bold;
+    color:var(--brown);
+    margin: 30px ;
+}
+
+ul{
+    width: fit-content;
+    margin: auto;
+}
+
+.list-item {
+    margin-bottom: 15px;
+}
+
+/* container lal copy w share buttons */
+.icons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* style buttons */
+.icon {
+    width:50px;
+    margin: 10px 10px;
+    fill:var(--brown);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* la kl l buttons */
+button{
+    border:none;
+    outline:none;
+    background-color: transparent;
+}
+
+#prevStep{
+    visibility: hidden;
+}

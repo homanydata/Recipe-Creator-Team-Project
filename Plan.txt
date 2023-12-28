@@ -1,17 +1,22 @@
 ** anything in this page is discussable and editable **
 
 Roles:
-  Ali Dokmak: main page & nav styling
-  Hiba: create recipe html & css
+  Hiba: main page & nav styling
+  Ali Dokmak: create recipe html & css
   Mrym: recipe Page
   Ali Houmani: javascript
 
 Steps:
-  - njhz sho mn3oz tools
-  - n7ki 3n thought process la 7ayala web project
-  - n2asem sh8l
-  - 23ml meet m3 kl wa7ad bs la nblsh
-  - do it
-  - bs n5alis kl wa7ad byo2ra la 7ada tane
-  - mnjm3 lproject w mnshof sho fi shi na2es
-  - eza fi darora nzabit shi aw nzid lamse a5ira
+  x njhz sho mn3oz tools
+  x n7ki 3n thought process la 7ayala web project
+  x n2asem sh8l
+  x 23ml meet m3 kl wa7ad bs la nblsh
+  x do html
+  x do css
+  x mnjm3 lproject w mnshof sho fi shi na2es
+  -> bs n5alis kl wa7ad byo2ra la 7ada tane
+  -> eza fi darora nzabit shi aw nzid lamse a5ira
+
+*
+The whole process took approximately one week, including the design, planning, and reviewing the final result
+*

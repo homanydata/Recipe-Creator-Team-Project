@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+body{
+  background-image: linear-gradient(to bottom right, var(--orange) 40%, var(--pink));
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  margin:0;
+}
+
+nav{
+  width:100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding:10px;
+  position: sticky;
+}
+
+.add-search{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+}
+
+.add-search svg{
+  fill:var(--gold);
+}
+
+.add-recipe{
+  border: solid var(--gold) ;
+  border-radius: 50%;
+  width: 40px;
+  height:40px;
+  padding: 3px;
+  margin: 5px;
+}
+
+.home{
+  background-color: var(--gold);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+.home svg{
+  fill: white;
+  height: 60px;
+  width: 60px;
+  padding-top:10px;
+}
+
+
+/* stars */
+.magic1, .magic2, .magic3{
+  fill:rgba(255, 255, 255, 0.142);
+  width:100px;
+  height:100px;
+}
+.magic1{
+  position:absolute;
+  left:60px;
+  top:140px;
+}
+.magic2{
+  position:absolute;
+  left:150px;
+  top:330px;
+}
+.magic3{
+  position:absolute;
+  left:300px;
+  top:180px;
+}
+
+svg{
+  width: 40px;
+  height:40px;
+}
+
+h1{
+  width: 90%;
+  margin: 120px auto;
+
+  color: var(--brown);
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
+  font-size: 2.5em;
+
+  text-align: center;
+  text-transform: capitalize;
+  word-spacing: 5px;
+  line-height: 2em;
+}
+
+
+
+
+/* recipes boxes styling */
+.recipesContainer{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: space-evenly;
+  margin: 50px 10px;
+}
+.recipe{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+  min-width: 140px;
+  max-width: 40%;
+  aspect-ratio: 2 / 3;
+  text-transform: capitalize;
+  margin: 20px 0;
+}
+.recipe img{
+  display: block;
+  width: 100%;
+  height: 50%;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.recipe h3{
+  color: black;
+  font-size: 1.6em;
+  font-weight: 700;
+  max-width: 80%;
+}
+.recipe p{
+  display: inline-block;
+  color: white;
+  background-color: var(--brown);
+  padding: 10px 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+
+
+/* search design */
+/* cuation !!! copy paste stuff ! if it works it works, never mess with it ! */
+#content {
+  position: relative;
+  translate: -15px 45%;
+}
+
+#content.on {
+  -webkit-animation-name: in-out;
+  animation-name: in-out;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+input {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--gold);
+  border-radius: 50%;
+  background: none;
+  color: var(--gold);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Roboto;
+  outline: 0;
+  -webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
+    padding 0.2s;
+  transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
+    padding 0.2s;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+
+.search {
+  background: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 100%;
+  outline: 0;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+
+.search:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background-color: var(--gold);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-top: 26px;
+  margin-left: 17px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.close {
+  translate: 300%;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.close:before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 4px;
+  margin-top: -1px;
+  margin-left: -13px;
+  background-color: var(--gold);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.close:after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 4px;
+  background-color: var(--gold);
+  margin-top: -1px;
+  margin-left: -13px;
+  cursor: pointer;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.square {
+  box-sizing: border-box;
+  padding: 0 40px 0 10px;
+  width: 200px;
+  height: 40px;
+  border: 4px solid var(--gold);
+  border-radius: 0;
+  background: none;
+  color: var(--gold);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  outline: 0;
+  -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
+    padding 0.2s;
+  transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
+    padding 0.2s;
+  -webkit-transition-delay: 0.4s, 0s, 0.4s;
+  transition-delay: 0.4s, 0s, 0.4s;
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
