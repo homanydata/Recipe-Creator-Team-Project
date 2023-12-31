@@ -67,6 +67,23 @@ input::placeholder{
 }
 
 
+#steps, #ingredients{
+    position: relative;
+}
+#deleteStep, #deleteIngredient{
+    position: absolute;
+    bottom: 13px;
+    right: -25px;
+    width: 20px;
+    aspect-ratio: 1/1;
+    fill: var(--grey);
+    vertical-align: middle;
+}
+#steps svg:nth-child(3), #ingredients svg:nth-child(4){
+    display: none;
+}
+
+
 input[type="file"]{
     display: none;
 }

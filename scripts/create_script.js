@@ -47,24 +47,30 @@ function loadIngredients(ingredients){
         <input required type="text" placeholder="quantity" value="${quantity}">
       </div>`
     }
+    ingredientsContainer.innerHTML += '<svg onclick="deleteLastIngredient()" id="deleteIngredient" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>'
 }
 function loadRecipeSteps(steps){
     stepsContainer.innerHTML = "<label>steps</label>"
     for(let step of steps){
         stepsContainer.innerHTML += `<input required type="text" placeholder="step details" value="${step}">`
     }
+    stepsContainer.innerHTML += '<svg onclick="deleteLastStep()" id="deleteStep" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>'
 }
 
 // adding steps and ingredients
 function addIngredient(){
+    ingredientsContainer.removeChild(ingredientsContainer.lastElementChild)
     ingredientsContainer.insertAdjacentHTML('beforeend', `<div class="ingrd">
     <input required type="text" placeholder="item">
     <input required type="text" placeholder="quantity">
     </div>`);
+    ingredientsContainer.insertAdjacentHTML('beforeend', '<svg onclick="deleteLastIngredient()" id="deleteIngredient" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>')
 }
 
 function addStep(){
+    stepsContainer.removeChild(stepsContainer.lastElementChild)
     stepsContainer.insertAdjacentHTML('beforeend', '<input required type="text" placeholder="step details">');
+    stepsContainer.insertAdjacentHTML('beforeend', '<svg onclick="deleteLastStep()" id="deleteStep" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>')
 }
 
 
@@ -156,3 +162,15 @@ function handleFileInputChange() {
       label.classList.remove('filled');
     }
   }
+
+
+function deleteLastStep(){
+    stepsContainer.removeChild(stepsContainer.lastChild)
+    stepsContainer.removeChild(stepsContainer.lastChild)
+    stepsContainer.insertAdjacentHTML('beforeend', '<svg onclick="deleteLastStep()" id="deleteStep" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>')
+}
+function deleteLastIngredient(){
+    ingredientsContainer.removeChild(ingredientsContainer.lastElementChild)
+    ingredientsContainer.removeChild(ingredientsContainer.lastElementChild)
+    ingredientsContainer.insertAdjacentHTML('beforeend', '<svg onclick="deleteLastIngredient()" id="deleteIngredient" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>')
+}
