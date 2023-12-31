@@ -14,9 +14,9 @@ Steps:
   x do html
   x do css
   x mnjm3 lproject w mnshof sho fi shi na2es
-  -> bs n5alis kl wa7ad byo2ra la 7ada tane
-  -> eza fi darora nzabit shi aw nzid lamse a5ira
+  x bs n5alis kl wa7ad byo2ra la 7ada tane
+  x eza fi darora nzabit shi aw nzid lamse a5ira
 
 *
-The whole process took approximately one week, including the design, planning, and reviewing the final result
+The whole project took one week, including the design, planning, and reviewing the final result
 *

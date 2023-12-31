@@ -130,7 +130,7 @@ function save_img(img_file) {
 
 // add recipe instance to recipes array in local storage
 function addToStorage(recipe){
-    allRecipes = JSON.parse(localStorage.getItem("allRecipes"));
+    allRecipes = localStorage.getItem("allRecipes") ? JSON.parse(localStorage.getItem("allRecipes")):[];
     currRecipe = localStorage.getItem("currRecipe");
     if(currRecipe==-1){
         allRecipes.push(recipe);
@@ -140,3 +140,19 @@ function addToStorage(recipe){
     navigator.clipboard.writeText(JSON.stringify(allRecipes));
     localStorage.setItem("allRecipes", JSON.stringify(allRecipes));
 }
+
+// change label styling when file input is filled
+function handleFileInputChange() {
+    // Get the file input and label elements
+    var fileInput = document.getElementById('recipeImage');
+    var label = document.querySelector('label[for="recipeImage"]');
+
+    // Check if the file input has a selected file
+    if (fileInput.files.length > 0) {
+      // If a file is selected, add the 'filled' class to the label
+      label.classList.add('filled');
+    } else {
+      // If no file is selected, remove the 'filled' class from the label
+      label.classList.remove('filled');
+    }
+  }

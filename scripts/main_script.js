@@ -16,13 +16,40 @@ const recipesContainer = document.getElementsByClassName("recipesContainer")[0]
 
 onload = ()=>{
     localStorage.setItem("currRecipe", -1);
-    scroll({
+    scrollTo({
         behavior:"auto",
         top:0,
         left:0
     })
     loadRecipes(readRecipes())
 }
+
+
+// stars scroll effect magic
+let lastScrollTop =
+  window.scrollY || document.documentElement.scrollTop;
+window.addEventListener(
+  'scroll',
+  function handleScroll() {
+    const scrollTopPosition =
+      window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTopPosition > lastScrollTop) {
+        const stars = document.getElementsByClassName("magic")
+        for(let star of stars){
+        star.style.rotate = (Number(String(star.style.rotate).split("deg")[0]) + 3) + "deg"
+        }
+    } else if (scrollTopPosition < lastScrollTop) {
+        const stars = document.getElementsByClassName("magic")
+        for(let star of stars){
+            star.style.rotate = (Number(String(star.style.rotate).split("deg")[0]) - 3) + "deg"
+        }
+    }
+    lastScrollTop =
+      scrollTopPosition <= 0 ? 0 : scrollTopPosition;
+  },
+  false,
+);
 
 
 function loadRecipes(recipes){
